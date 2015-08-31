@@ -1149,6 +1149,8 @@ static void f90cache_driver(int argc, char *argv[])
 	f90_compiler_type = GNU_GFC;
     } else if (strncmp(compiler_path, "ifort", 5) == 0) {
 	f90_compiler_type = INTEL_IFC;
+	} else if (strncmp(compiler_path, "pgf90", 5) == 0) {
+	f90_compiler_type = INTEL_IFC;
     } else {
 	printf("(f90cache:) %s: Fortran 90 compiler not supported: %s\n",MYNAME,compiler_path);
 	fc_log("Unsupported compiler: %s\n", compiler_path);
